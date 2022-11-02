@@ -208,7 +208,7 @@ class Logined extends Controller{
         }
         unset($_SESSION["cart"][$id]);
         if(empty($_SESSION["cart"])){
-            header("Location:http://localhost/Project/Logined/");
+            header("Location:http://localhost:8080/Project/Logined/");
         }
         if(!empty($_SESSION["cart"])){
             $qr="SELECT * FROM `sanpham` WHERE `idsanpham` IN (".implode(",",array_keys($_SESSION["cart"])).")";
